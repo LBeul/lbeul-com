@@ -16,7 +16,7 @@ export default function Home({ posts }) {
           >
             <img
               src={post.frontMatter.thumbnailUrl}
-              className="aspect-square object-cover rounded-l-lg h-40 w-40"
+              className="aspect-square object-cover rounded-l-lg h-48 w-48"
               alt="thumbnail"
               objectFit="cover"
             />

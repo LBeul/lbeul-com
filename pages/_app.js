@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Next and MDX blog</title>
+        <title>lbeul.com</title>
       </Head>
       <div className="font-sans flex flex-col items-center">
         <Nav />
