@@ -7,32 +7,23 @@ import Image from "next/image";
 
 export default function Home({ posts }) {
   return (
-    <div className="mt-5">
+    <div className="container">
       {posts.map((post, index) => (
         <Link href={"/blog/" + post.slug} passHref key={index}>
-          <div className="card mb-3 pointer" style={{ maxWidth: "540px" }}>
-            <div className="row g-0">
-              <div className="col-md-8">
-                <div className="card-body">
-                  <h5 className="card-title">{post.frontMatter.title}</h5>
-                  <p className="card-text">{post.frontMatter.description}</p>
-                  <p className="card-text">
-                    <small className="text-muted">
-                      {post.frontMatter.date}
-                    </small>
-                  </p>
-                </div>
-              </div>
-              <div className="col-md-4 m-auto">
-                <Image
-                  src={post.frontMatter.thumbnailUrl}
-                  className="img-fluid mt-1 rounded-start"
-                  alt="thumbnail"
-                  width={500}
-                  height={400}
-                  objectFit="cover"
-                />
-              </div>
+          <div
+            className="container flex flex-row rounded-lg border border-gray-200 shadow-lg my-5"
+            style={{ maxWidth: "540px" }}
+          >
+            <img
+              src={post.frontMatter.thumbnailUrl}
+              className="aspect-square object-cover rounded-l-lg h-40 w-40"
+              alt="thumbnail"
+              objectFit="cover"
+            />
+            <div className="container py-5 px-5">
+              <h5 className="text-xl font-">{post.frontMatter.title}</h5>
+              <p className="text-base">{post.frontMatter.description}</p>
+              <p className="text-sm text-gray-500">{post.frontMatter.date}</p>
             </div>
           </div>
         </Link>

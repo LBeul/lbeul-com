@@ -9,8 +9,8 @@ import Button from "../../components/Buttons";
 
 const PostPage = ({ frontMatter: { title }, mdxSource }) => {
   return (
-    <div className="mt-4">
-      <h1>{title}</h1>
+    <div className="container">
+      <h1 className="text-2xl font-bold">{title}</h1>
       <MDXRemote {...mdxSource} components={{ Button, SyntaxHighlighter }} />
     </div>
   );
