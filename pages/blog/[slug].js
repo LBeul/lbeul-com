@@ -5,14 +5,24 @@ import path from "path";
 import matter from "gray-matter";
 import SyntaxHighlighter from "react-syntax-highlighter";
 
-import Button from "../../components/Buttons";
+import MyButton from "../../components/MyButton";
+import { Heading, VStack } from "@chakra-ui/react";
+import { MDXProvider } from "@mdx-js/react";
+import blogStyles from "./blogStyles";
 
 const PostPage = ({ frontMatter: { title }, mdxSource }) => {
   return (
-    <div className="container">
-      <h1 className="text-2xl font-bold">{title}</h1>
-      <MDXRemote {...mdxSource} components={{ Button, SyntaxHighlighter }} />
-    </div>
+    <VStack align="stretch" mx="auto" w="80%" spacing="20px" mb="20px">
+      <MDXProvider components={blogStyles}>
+        <Heading fontSize="3xl" as="h1">
+          {title}
+        </Heading>
+        <MDXRemote
+          {...mdxSource}
+          components={{ MyButton, SyntaxHighlighter }}
+        />
+      </MDXProvider>
+    </VStack>
   );
 };
 

@@ -1,16 +1,14 @@
 import { useState } from "react";
+import { Button } from "@chakra-ui/react";
 
-const Button = () => {
+const MyButton = () => {
   const [clickCount, setClickCount] = useState(0);
 
   return (
-    <button
-      className="btn btn-primary"
-      onClick={() => setClickCount(clickCount + 1)}
-    >
+    <Button className="" onClick={() => setClickCount(clickCount + 1)}>
       {clickCount !== 0 ? `You clicked ${clickCount} times` : "Click me"}
-    </button>
+    </Button>
   );
 };
 
-export default Button;
+export default MyButton;

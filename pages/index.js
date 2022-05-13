@@ -3,32 +3,42 @@ import path from "path";
 import matter from "gray-matter";
 
 import Link from "next/link";
-import Image from "next/image";
+import { Box, HStack, VStack, Image, Text } from "@chakra-ui/react";
+import TagSet from "../components/TagSet";
 
 export default function Home({ posts }) {
   return (
-    <div className="container">
+    <VStack>
       {posts.map((post, index) => (
         <Link href={"/blog/" + post.slug} passHref key={index}>
-          <div
-            className="container flex flex-row rounded-lg border border-gray-200 shadow-lg my-5"
-            style={{ maxWidth: "540px" }}
-          >
-            <img
+          <HStack width="90%" borderRadius="lg" borderWidth="1px">
+            <Image
               src={post.frontMatter.thumbnailUrl}
-              className="aspect-square object-cover rounded-l-lg h-48 w-48"
               alt="thumbnail"
+              boxSize="175px"
               objectFit="cover"
+              borderLeftRadius="lg"
             />
-            <div className="container py-5 px-5">
-              <h5 className="text-xl font-">{post.frontMatter.title}</h5>
-              <p className="text-base">{post.frontMatter.description}</p>
-              <p className="text-sm text-gray-500">{post.frontMatter.date}</p>
-            </div>
-          </div>
+            <Box paddingLeft={5}>
+              <Text
+                color="gray.500"
+                fontWeight="semibold"
+                letterSpacing="wide"
+                fontSize="xs"
+                textTransform="uppercase"
+              >
+                {post.frontMatter.date}
+              </Text>
+              <Text fontSize="xl" fontWeight="semibold">
+                {post.frontMatter.title}
+              </Text>
+              <Text>{post.frontMatter.description}</Text>
+              <TagSet tags={post.frontMatter.tags} />
+            </Box>
+          </HStack>
         </Link>
       ))}
-    </div>
+    </VStack>
   );
 }
 
