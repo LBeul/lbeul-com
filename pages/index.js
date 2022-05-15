@@ -11,15 +11,15 @@ export default function Home({ posts }) {
     <VStack>
       {posts.map((post, index) => (
         <Link href={"/blog/" + post.slug} passHref key={index}>
-          <HStack width="90%" borderRadius="lg" borderWidth="1px">
+          <HStack width="75%" borderRadius="lg" borderWidth="1px">
             <Image
               src={post.frontMatter.thumbnailUrl}
               alt="thumbnail"
-              boxSize="175px"
+              boxSize="225px"
               objectFit="cover"
               borderLeftRadius="lg"
             />
-            <Box paddingLeft={5}>
+            <Box p={5}>
               <Text
                 color="gray.500"
                 fontWeight="semibold"

@@ -12,7 +12,7 @@ import blogStyles from "./blogStyles";
 
 const PostPage = ({ frontMatter: { title }, mdxSource }) => {
   return (
-    <VStack align="stretch" mx="auto" w="80%" spacing="20px" mb="20px">
+    <VStack align="stretch" mx="auto" w="75%" spacing="20px" mb="20px">
       <MDXProvider components={blogStyles}>
         <Heading fontSize="3xl" as="h1">
           {title}
