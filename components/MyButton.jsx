@@ -5,7 +5,7 @@ const MyButton = () => {
   const [clickCount, setClickCount] = useState(0);
 
   return (
-    <Button className="" onClick={() => setClickCount(clickCount + 1)}>
+    <Button colorScheme="twitter" onClick={() => setClickCount(clickCount + 1)}>
       {clickCount !== 0 ? `You clicked ${clickCount} times` : "Click me"}
     </Button>
   );

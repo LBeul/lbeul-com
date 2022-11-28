@@ -1,8 +1,7 @@
-import { ChakraProvider } from "@chakra-ui/react";
-import Head from "next/head";
-import Nav from "../components/Nav";
-import "../styles/globals.css";
-import theme from "../theme";
+import { ChakraProvider } from '@chakra-ui/react';
+import Head from 'next/head';
+import Nav from '../components/Nav';
+import theme from '../theme';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -10,7 +9,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>lbeul.com</title>
       </Head>
-      <div className="">
+      <div>
         <Nav />
         <main>
           <Component {...pageProps} />
