@@ -5,23 +5,15 @@ import {
   IconButton,
   Stack,
   Collapse,
-  Icon,
   Link,
-  useColorModeValue,
   useBreakpointValue,
   useDisclosure,
   useColorMode,
   Heading,
 } from '@chakra-ui/react';
-import {
-  HamburgerIcon,
-  CloseIcon,
-  ChevronRightIcon,
-  MoonIcon,
-  SunIcon,
-} from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 
-export default function NavBar() {
+export default function NavBar(): JSX.Element {
   const { isOpen, onToggle } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
@@ -71,7 +63,7 @@ export default function NavBar() {
   );
 }
 
-const DesktopNav = () => {
+const DesktopNav = (): JSX.Element => {
   return (
     <Stack direction={'row'} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
@@ -85,12 +77,11 @@ const DesktopNav = () => {
   );
 };
 
-const MobileNav = () => {
+const MobileNav = (): JSX.Element => {
   return (
     <Flex align={'center'} width='75%' mx='auto'>
       <Stack
         w='100%'
-        bg={useColorModeValue('white', 'gray.800')}
         display={{ md: 'none' }}
         borderBottom='1px solid lightgrey'
       >
