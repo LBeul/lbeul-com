@@ -1,5 +1,7 @@
 # lbeul.com
 
+## :construction: WORK IN PROGRESS :construction:
+
 A personal website written in **React**, **TypeScript** and **NextJS**.
 Styled using **ChakraUI** and **ReactIcons**.
 Contains a markdown-driven blog powered by **grey-matter**.
