@@ -31,9 +31,9 @@ const About: NextPage = () => {
             My name is Louis!
           </Text>
           <Text>
-            I'm a computer science student and web enthusiast from Berlin,
+            I am a computer science student and web enthusiast from Berlin,
             Germany. Besides my studies, I am working as a software engineer --
-            mostly writing JavaScript and TypeScript. On this website, I'm
+            mostly writing JavaScript and TypeScript. On this website, I am
             sharing my thoughts, work and ideas. Wanna share some of yours too?
             Feel free to contact me!
           </Text>

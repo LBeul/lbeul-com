@@ -4,7 +4,6 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-import MyButton from '../../components/MyButton';
 import { Heading, VStack } from '@chakra-ui/react';
 import { MDXProvider } from '@mdx-js/react';
 import blogStyles from './blogStyles';
@@ -17,7 +16,7 @@ const PostPage = ({ frontMatter: { title }, mdxSource }: PostPageProps) => {
         <Heading fontSize='4xl' as='h1'>
           {title}
         </Heading>
-        <MDXRemote {...mdxSource} components={{ MyButton }} />
+        <MDXRemote {...mdxSource} />
       </MDXProvider>
     </VStack>
   );
