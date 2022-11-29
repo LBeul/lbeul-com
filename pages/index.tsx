@@ -5,11 +5,12 @@ import matter from 'gray-matter';
 import Link from 'next/link';
 import { Box, HStack, VStack, Image, Text } from '@chakra-ui/react';
 import TagSet from '../components/TagSet';
+import { NextPage } from 'next';
 
-export default function Home({ posts }) {
+const Home: NextPage = ({ posts }: any) => {
   return (
     <VStack my={10} spacing={5}>
-      {posts.map((post, index) => (
+      {posts.map((post: any, index: number) => (
         <Link href={'/blog/' + post.slug} passHref key={index}>
           <HStack
             width='75%'
@@ -45,7 +46,7 @@ export default function Home({ posts }) {
       ))}
     </VStack>
   );
-}
+};
 
 export const getStaticProps = async () => {
   const files = fs.readdirSync(path.join('posts'));
@@ -66,3 +67,5 @@ export const getStaticProps = async () => {
     },
   };
 };
+
+export default Home;

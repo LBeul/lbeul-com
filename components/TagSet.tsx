@@ -1,6 +1,10 @@
 import { HStack, Tag } from '@chakra-ui/react';
 
-const TagSet = ({ tags }) => {
+type TagSetProps = {
+  tags: string[];
+};
+
+const TagSet = ({ tags }: TagSetProps): JSX.Element => {
   return (
     <HStack mt={3}>
       {tags.map((tagLabel) => (

@@ -1,8 +1,9 @@
 import { Box, HStack, Image, Text, VStack } from '@chakra-ui/react';
 import TagSet from '../components/TagSet';
 import bookList from '../bookList';
+import { NextPage } from 'next';
 
-const Books = () => {
+const Books: NextPage = () => {
   return (
     <VStack my={10} spacing={5}>
       {bookList.map((book) => (
