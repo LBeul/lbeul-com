@@ -1,40 +1,15 @@
-import { Box, HStack, Image, Text, VStack } from '@chakra-ui/react';
-import TagSet from '../components/TagSet';
+import { SimpleGrid } from '@chakra-ui/react';
 import bookList from '../bookList';
 import { NextPage } from 'next';
+import BookCard from '../components/BookCard';
 
 const Books: NextPage = () => {
   return (
-    <VStack my={10} spacing={5}>
+    <SimpleGrid minChildWidth='275px' spacing='10px' w='100%'>
       {bookList.map((book) => (
-        <HStack width='75%' key={book.isbn}>
-          <Image
-            src={`https://covers.openlibrary.org/b/isbn/${book.isbn}-L.jpg`}
-            alt='thumbnail'
-            height='225px'
-            width='150px'
-            objectFit='cover'
-            borderLeftRadius='lg'
-          />
-          <Box p={5}>
-            <Text
-              color='gray.500'
-              fontWeight='semibold'
-              letterSpacing='wide'
-              fontSize='xs'
-              textTransform='uppercase'
-            >
-              {book.author}
-            </Text>
-            <Text fontSize='xl' fontWeight='semibold'>
-              {book.title}
-            </Text>
-            <Text>{book.review}</Text>
-            <TagSet tags={book.tags} />
-          </Box>
-        </HStack>
+        <BookCard book={book} key={book.isbn} />
       ))}
-    </VStack>
+    </SimpleGrid>
   );
 };
 

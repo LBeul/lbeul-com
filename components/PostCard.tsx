@@ -1,10 +1,10 @@
 import { Image, Text, Card, CardBody, Stack, Heading } from '@chakra-ui/react';
 import Link from 'next/link';
-import { PostTileProps } from '../interfaces';
+import { PostCardProps } from '../interfaces';
 
 import TagSet from './TagSet';
 
-const PostTile = ({ post }: PostTileProps): JSX.Element => {
+const PostCard = ({ post }: PostCardProps): JSX.Element => {
   const { slug, frontMatter } = post;
   return (
     <Link href={'/blog/' + slug} passHref>
@@ -12,7 +12,8 @@ const PostTile = ({ post }: PostTileProps): JSX.Element => {
         direction={{ base: 'column', sm: 'row' }}
         overflow='hidden'
         variant='outline'
-        width={'75%'}
+        width={'100%'}
+        cursor='pointer'
       >
         <Image
           src={frontMatter.thumbnailUrl}
@@ -42,4 +43,4 @@ const PostTile = ({ post }: PostTileProps): JSX.Element => {
   );
 };
 
-export default PostTile;
+export default PostCard;

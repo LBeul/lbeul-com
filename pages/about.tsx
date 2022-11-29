@@ -15,7 +15,7 @@ import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 const About: NextPage = () => {
   return (
     <VStack my={10} spacing={5}>
-      <HStack width='75%'>
+      <HStack>
         <Image
           src='louis.jpg'
           boxSize='200px'

@@ -2,10 +2,10 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { NextPage } from 'next';
-import PostTileList from '../components/PostTileList';
+import PostCardList from '../components/PostCardList';
 
 const Home: NextPage = ({ posts }: any) => {
-  return <PostTileList posts={posts} />;
+  return <PostCardList posts={posts} />;
 };
 
 export const getStaticProps = async () => {

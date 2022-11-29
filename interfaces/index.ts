@@ -17,11 +17,11 @@ type Post = {
   };
 };
 
-export type PostTileProps = {
+export type PostCardProps = {
   post: Post;
 };
 
-export type PostTileListProps = {
+export type PostCardListProps = {
   posts: Post[];
 };
 
