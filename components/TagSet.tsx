@@ -1,8 +1,5 @@
 import { HStack, Tag } from '@chakra-ui/react';
-
-type TagSetProps = {
-  tags: string[];
-};
+import { TagSetProps } from '../interfaces';
 
 const TagSet = ({ tags }: TagSetProps): JSX.Element => {
   return (

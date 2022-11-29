@@ -8,11 +8,7 @@ import MyButton from '../../components/MyButton';
 import { Heading, VStack } from '@chakra-ui/react';
 import { MDXProvider } from '@mdx-js/react';
 import blogStyles from './blogStyles';
-
-type PostPageProps = {
-  frontMatter: { title: string };
-  mdxSource: any;
-};
+import { PostPageProps } from '../../interfaces';
 
 const PostPage = ({ frontMatter: { title }, mdxSource }: PostPageProps) => {
   return (
@@ -42,13 +38,11 @@ export const getStaticPaths = async () => {
   };
 };
 
-type getStaticPropsParams = {
-  params: { slug: string };
-};
-
 export const getStaticProps = async ({
   params: { slug },
-}: getStaticPropsParams) => {
+}: {
+  params: { slug: string };
+}) => {
   const markdownWithMeta = fs.readFileSync(
     path.join('posts', slug + '.mdx'),
     'utf-8'
