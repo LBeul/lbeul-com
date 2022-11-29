@@ -17,7 +17,7 @@ const About: NextPage = () => {
     <VStack my={10} spacing={5}>
       <HStack>
         <Image
-          src='louis.jpg'
+          src='memoji.jpg'
           boxSize='200px'
           objectFit='cover'
           borderRadius='lg'
