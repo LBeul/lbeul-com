@@ -1,6 +1,8 @@
 import {
   Box,
   Button,
+  Card,
+  CardBody,
   HStack,
   Icon,
   IconButton,
@@ -15,15 +17,21 @@ import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 const About: NextPage = () => {
   return (
     <VStack my={10} spacing={5}>
-      <HStack>
+      <Card
+        direction={{ base: 'column', md: 'row' }}
+        maxW={{ md: '100%', base: '300px' }}
+        overflow='hidden'
+        variant='outline'
+        border='none'
+      >
         <Image
           src='memoji.jpg'
-          boxSize='200px'
+          maxW={{ base: '100%', sm: '300px' }}
+          maxH={{ base: '300px' }}
           objectFit='cover'
           borderRadius='lg'
-          marginRight='20px'
         />
-        <Box border='2px solid red'>
+        <CardBody>
           <Text fontSize='xl' fontWeight='semibold'>
             Hey there,
           </Text>
@@ -34,8 +42,9 @@ const About: NextPage = () => {
             I am a computer science student and web enthusiast from Berlin,
             Germany. Besides my studies, I am working as a software engineer --
             mostly writing JavaScript and TypeScript. On this website, I am
-            sharing my thoughts, work and ideas. Wanna share some of yours too?
-            Feel free to contact me!
+            sharing my thoughts, work and ideas. I even included my favourite
+            books in here!
+            <br /> <em>Feel free to reach out to me:</em>
           </Text>
           <HStack mt={3}>
             <Link href='https://www.linkedin.com/in/louis-beul/'>
@@ -48,8 +57,8 @@ const About: NextPage = () => {
               <Icon as={FaTwitterSquare} h={30} w={30} />
             </Link>
           </HStack>
-        </Box>
-      </HStack>
+        </CardBody>
+      </Card>
     </VStack>
   );
 };
