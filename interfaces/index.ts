@@ -33,3 +33,8 @@ export type PostPageProps = {
 export type TagSetProps = {
   tags: string[];
 };
+
+export type BookCardsGridProps = {
+  isLoaded: boolean;
+  bookList: Book[] | null;
+};

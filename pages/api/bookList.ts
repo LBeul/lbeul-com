@@ -34,4 +34,11 @@ export default [
     review: 'this book good book',
     tags: ['non-fiction', 'essays'],
   },
+  {
+    isbn: '9781665190565',
+    title: 'The Furthest Station',
+    author: 'Ben Aaronovitch',
+    review: 'this book good book',
+    tags: ['fiction', 'fantasy'],
+  },
 ];

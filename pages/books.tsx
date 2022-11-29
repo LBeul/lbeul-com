@@ -1,16 +1,22 @@
-import { SimpleGrid } from '@chakra-ui/react';
-import bookList from '../bookList';
 import { NextPage } from 'next';
-import BookCard from '../components/BookCard';
+import { useEffect, useState } from 'react';
+import { Book } from '../interfaces';
+import BookCardsGrid from '../components/BookCardsGrid';
 
 const Books: NextPage = () => {
-  return (
-    <SimpleGrid minChildWidth='275px' spacing='10px' w='100%'>
-      {bookList.map((book) => (
-        <BookCard book={book} key={book.isbn} />
-      ))}
-    </SimpleGrid>
-  );
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
+  const [bookList, setBookList] = useState<Book[] | null>(null);
+  useEffect(() => fetchBooks('http://localhost:3000/api/books'), []);
+
+  const fetchBooks = (url: string): void => {
+    setIsLoaded(false);
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => setBookList(data));
+    setIsLoaded(true);
+  };
+
+  return <BookCardsGrid isLoaded={isLoaded} bookList={bookList} />;
 };
 
 export default Books;
