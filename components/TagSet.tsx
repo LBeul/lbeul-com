@@ -3,7 +3,7 @@ import { TagSetProps } from '../interfaces';
 
 const TagSet = ({ tags }: TagSetProps): JSX.Element => {
   return (
-    <HStack mt={3}>
+    <HStack>
       {tags.map((tagLabel) => (
         <Tag key={tagLabel}>{tagLabel}</Tag>
       ))}

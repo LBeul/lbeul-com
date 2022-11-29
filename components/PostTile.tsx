@@ -1,4 +1,4 @@
-import { HStack, Image, Box, Text } from '@chakra-ui/react';
+import { Image, Text, Card, CardBody, Stack, Heading } from '@chakra-ui/react';
 import Link from 'next/link';
 import { PostTileProps } from '../interfaces';
 
@@ -8,31 +8,36 @@ const PostTile = ({ post }: PostTileProps): JSX.Element => {
   const { slug, frontMatter } = post;
   return (
     <Link href={'/blog/' + slug} passHref>
-      <HStack width='75%' borderRadius='lg' borderWidth='0.5px' boxShadow='lg'>
+      <Card
+        direction={{ base: 'column', sm: 'row' }}
+        overflow='hidden'
+        variant='outline'
+        width={'75%'}
+      >
         <Image
           src={frontMatter.thumbnailUrl}
           alt='thumbnail'
-          boxSize='225px'
           objectFit='cover'
           borderLeftRadius='lg'
+          maxW={{ base: '100%', sm: '200px' }}
         />
-        <Box p={5}>
-          <Text
-            color='gray.500'
-            fontWeight='semibold'
-            letterSpacing='wide'
-            fontSize='xs'
-            textTransform='uppercase'
-          >
-            {frontMatter.date}
-          </Text>
-          <Text fontSize='xl' fontWeight='semibold'>
-            {frontMatter.title}
-          </Text>
-          <Text>{frontMatter.description}</Text>
-          <TagSet tags={frontMatter.tags} />
-        </Box>
-      </HStack>
+        <Stack>
+          <CardBody>
+            <Text
+              color='gray.500'
+              fontWeight='semibold'
+              letterSpacing='wide'
+              fontSize='xs'
+              textTransform='uppercase'
+            >
+              {frontMatter.date}
+            </Text>
+            <Heading size='md'>{frontMatter.title}</Heading>
+            <Text py='2'>{frontMatter.description}</Text>
+            <TagSet tags={frontMatter.tags} />
+          </CardBody>
+        </Stack>
+      </Card>
     </Link>
   );
 };
