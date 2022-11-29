@@ -4,9 +4,8 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-import { Heading, VStack } from '@chakra-ui/react';
+import { Heading, VStack, Image } from '@chakra-ui/react';
 import { MDXProvider } from '@mdx-js/react';
-import blogStyles from './blogStyles';
 import { PostPageProps } from '../../interfaces';
 
 const PostPage = ({ frontMatter: { title }, mdxSource }: PostPageProps) => {
@@ -53,6 +52,20 @@ export const getStaticProps = async ({
   return {
     props: { frontMatter, slug, mdxSource },
   };
+};
+
+const blogStyles = {
+  h2: (props: any) => <Heading {...props} fontSize='xl' as='h2' />,
+  img: (props: any) => (
+    <Image
+      {...props}
+      objectFit='cover'
+      borderRadius='xl'
+      width='100%'
+      mx='auto'
+    />
+  ),
+  h4: (props: any) => <Heading {...props} fontSize='lg' color='gray.600' />,
 };
 
 export default PostPage;
