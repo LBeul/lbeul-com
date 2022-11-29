@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react';
 import Link from 'next/link';
 
-const Nav = () => {
+const Nav = (): JSX.Element => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
@@ -42,7 +42,11 @@ const Nav = () => {
             books
           </Heading>
         </Link>
-        <IconButton onClick={toggleColorMode} borderRadius='full'>
+        <IconButton
+          onClick={toggleColorMode}
+          borderRadius='full'
+          aria-label='toggle-theme'
+        >
           {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
         </IconButton>
       </HStack>

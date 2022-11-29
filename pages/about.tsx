@@ -8,10 +8,11 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react';
+import { NextPage } from 'next';
 import Link from 'next/link';
 import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 
-const About = () => {
+const About: NextPage = () => {
   return (
     <VStack my={10} spacing={5}>
       <HStack width='75%'>
