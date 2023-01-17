@@ -1,11 +1,8 @@
 import {
-  Box,
-  Button,
   Card,
   CardBody,
   HStack,
   Icon,
-  IconButton,
   Image,
   Text,
   VStack,
@@ -26,6 +23,7 @@ const About: NextPage = () => {
       >
         <Image
           src='memoji.jpg'
+          alt='Memoji of myself, Louis'
           maxW={{ base: '100%', sm: '300px' }}
           maxH={{ base: '300px' }}
           objectFit='cover'
@@ -47,15 +45,27 @@ const About: NextPage = () => {
             <br /> <em>Feel free to reach out to me:</em>
           </Text>
           <HStack mt={3}>
-            <Link href='https://www.linkedin.com/in/louis-beul/'>
+            <a
+              href='https://www.linkedin.com/in/louis-beul/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <Icon as={FaLinkedin} h={30} w={30} />
-            </Link>
-            <Link href='https://github.com/LBeul'>
+            </a>
+            <a
+              href='https://github.com/LBeul'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <Icon as={FaGithubSquare} h={30} w={30} />
-            </Link>
-            <Link href='https://twitter.com/lbeul_'>
+            </a>
+            <a
+              href='https://twitter.com/lbeul_'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <Icon as={FaTwitterSquare} h={30} w={30} />
-            </Link>
+            </a>
           </HStack>
         </CardBody>
       </Card>

@@ -10,7 +10,7 @@ import { PostPageProps } from '../../interfaces';
 
 const PostPage = ({ frontMatter: { title }, mdxSource }: PostPageProps) => {
   return (
-    <VStack align='stretch' mx='auto' w='60%' spacing='20px' mb='20px'>
+    <VStack align='stretch' mx='auto' w='100%' spacing='20px' mb='20px'>
       <MDXProvider components={blogStyles}>
         <Heading fontSize='4xl' as='h1'>
           {title}

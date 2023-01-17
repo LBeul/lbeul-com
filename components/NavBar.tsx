@@ -5,13 +5,13 @@ import {
   IconButton,
   Stack,
   Collapse,
-  Link,
   useBreakpointValue,
   useDisclosure,
   useColorMode,
   Heading,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
+import Link from 'next/link';
 
 export default function NavBar(): JSX.Element {
   const { isOpen, onToggle } = useDisclosure();
@@ -37,7 +37,7 @@ export default function NavBar(): JSX.Element {
             size='md'
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
           >
-            <Link href='/about'>lbeul</Link>
+            <Link href='/'>lbeul</Link>
           </Heading>
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -68,9 +68,7 @@ const DesktopNav = (): JSX.Element => {
     <Stack direction={'row'} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
-          <Link p={2} href={navItem.href} fontSize={'sm'} fontWeight={500}>
-            {navItem.label}
-          </Link>
+          <Link href={navItem.href}>{navItem.label}</Link>
         </Box>
       ))}
     </Stack>
@@ -112,7 +110,7 @@ const MobileNavItem = ({ label, href }: NavItem) => {
 interface NavItem {
   label: string;
   subLabel?: string;
-  href?: string;
+  href: string;
 }
 
 const NAV_ITEMS: Array<NavItem> = [

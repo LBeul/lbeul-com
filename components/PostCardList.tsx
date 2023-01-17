@@ -4,7 +4,7 @@ import PostCard from './PostCard';
 
 const PostCardList = ({ posts }: PostCardListProps): JSX.Element => {
   return (
-    <VStack my={10} spacing={5}>
+    <VStack my={5} spacing={5}>
       {posts.map((post: any, index: number) => (
         <PostCard post={post} key={index} />
       ))}

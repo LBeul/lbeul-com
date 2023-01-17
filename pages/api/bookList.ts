@@ -1,4 +1,4 @@
-export default [
+const bookList = [
   {
     isbn: '9780593135204',
     title: 'Project Hail Mary',
@@ -42,3 +42,4 @@ export default [
     tags: ['fiction', 'fantasy'],
   },
 ];
+export default bookList;
