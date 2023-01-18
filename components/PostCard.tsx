@@ -16,7 +16,7 @@ const PostCard = ({ post }: PostCardProps): JSX.Element => {
         cursor='pointer'
       >
         <Image
-          src={frontMatter.thumbnailUrl}
+          src={`blog-images/${frontMatter.thumbnailUrl}`}
           alt='thumbnail'
           objectFit='cover'
           borderLeftRadius='lg'

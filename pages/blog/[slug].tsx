@@ -4,15 +4,15 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-import { Heading, VStack, Image } from '@chakra-ui/react';
+import { Heading, VStack, Image, Text } from '@chakra-ui/react';
 import { MDXProvider } from '@mdx-js/react';
 import { PostPageProps } from '../../interfaces';
 
 const PostPage = ({ frontMatter: { title }, mdxSource }: PostPageProps) => {
   return (
-    <VStack align='stretch' mx='auto' w='100%' spacing='20px' mb='20px'>
+    <VStack align='stretch' mx='auto' w='80%' spacing='20px' mb='20px'>
       <MDXProvider components={blogStyles}>
-        <Heading fontSize='4xl' as='h1'>
+        <Heading fontSize='7xl' as='h1'>
           {title}
         </Heading>
         <MDXRemote {...mdxSource} />
@@ -55,17 +55,25 @@ export const getStaticProps = async ({
 };
 
 const blogStyles = {
-  h2: (props: any) => <Heading {...props} fontSize='xl' as='h2' />,
+  h4: (props: any) => (
+    <Heading {...props} fontSize='lg' color='gray.500' lineHeight={1.75} />
+  ),
+  h2: (props: any) => (
+    <Heading {...props} fontSize='2xl' as='h2' lineHeight={2} />
+  ),
+  h3: (props: any) => <Heading {...props} fontSize='lg' as='h3' />,
+  p: (props: any) => <Text {...props} fontSize='lg' lineHeight={1.75} />,
   img: (props: any) => (
     <Image
       {...props}
+      src={`../blog-images/${props.src}`}
       objectFit='cover'
       borderRadius='xl'
       width='100%'
       mx='auto'
+      alt={props.alt}
     />
   ),
-  h4: (props: any) => <Heading {...props} fontSize='lg' color='gray.600' />,
 };
 
 export default PostPage;

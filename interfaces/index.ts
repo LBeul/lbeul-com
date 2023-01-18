@@ -35,6 +35,5 @@ export type TagSetProps = {
 };
 
 export type BookCardsGridProps = {
-  isLoaded: boolean;
-  bookList: Book[] | null;
+  bookList: Book[];
 };
