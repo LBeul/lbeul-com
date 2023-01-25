@@ -4,7 +4,7 @@ import BookCard from './BookCard';
 
 const BookCardsGrid = ({ bookList }: BookCardsGridProps) => {
   return (
-    <SimpleGrid minChildWidth='275px' spacing='10px' w='100%'>
+    <SimpleGrid minChildWidth='275px' spacing='10px' w='100%' autoRows='1fr'>
       {bookList?.map((book) => (
         <BookCard book={book} key={book.isbn} />
       ))}

@@ -18,31 +18,32 @@ const About: NextPage = () => {
         direction={{ base: 'column', md: 'row' }}
         maxW={{ md: '100%', base: '300px' }}
         overflow='hidden'
-        variant='outline'
-        border='none'
+        variant='filled'
       >
         <Image
           src='memoji.jpg'
           alt='Memoji of myself, Louis'
-          maxW={{ base: '100%', sm: '300px' }}
-          maxH={{ base: '300px' }}
+          maxW={{ base: '100%', sm: '310px' }}
+          maxH={{ base: '310px' }}
           objectFit='cover'
           borderRadius='lg'
         />
-        <CardBody>
-          <Text fontSize='xl' fontWeight='semibold'>
+        <CardBody paddingBottom={0}>
+          <Text fontSize='2xl' fontWeight='semibold'>
             Hey there,
           </Text>
-          <Text fontSize='xl' fontWeight='light'>
+          <Text fontSize='2xl' fontWeight='light' mb={3}>
             My name is Louis!
           </Text>
-          <Text>
+          <Text mb={3}>
             I am a computer science student and web enthusiast from Berlin,
-            Germany. Besides my studies, I am working as a software engineer --
-            mostly writing JavaScript and TypeScript. On this website, I am
-            sharing my thoughts, work and ideas. I even included my favourite
-            books in here!
-            <br /> <em>Feel free to reach out to me:</em>
+            Germany. Besides my studies, I am working as a software engineer -
+            mostly writing JavaScript and TypeScript. When I am not behind the
+            keyboard, you will probably find me on a bicycle.
+          </Text>
+          <Text>
+            On this website, I am sharing my thoughts, work and ideas. I even
+            included some of my favourite books in here!
           </Text>
           <HStack mt={3}>
             <a

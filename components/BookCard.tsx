@@ -13,7 +13,7 @@ import TagSet from './TagSet';
 const BookCard = ({ book }: { book: Book }): JSX.Element => {
   const { isbn, author, title, review, tags } = book;
   return (
-    <GridItem>
+    <GridItem height='100%'>
       <Card
         direction={{ base: 'column', sm: 'row' }}
         overflow='hidden'

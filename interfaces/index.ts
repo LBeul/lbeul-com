@@ -21,8 +21,24 @@ export type PostCardProps = {
   post: Post;
 };
 
+type Project = {
+  name: string;
+  tags: string[];
+  link: string;
+  imgUrl: string;
+  description: string;
+};
+
+export type ProjectCardProps = {
+  project: Project;
+};
+
 export type PostCardListProps = {
-  posts: Post[];
+  cards: Post[];
+};
+
+export type ProjectCardListProps = {
+  cards: Project[];
 };
 
 export type PostPageProps = {

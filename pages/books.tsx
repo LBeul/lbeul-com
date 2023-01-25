@@ -11,7 +11,7 @@ const bookList: Book[] = [
     isbn: '9780593135204',
     title: 'Project Hail Mary',
     author: 'Andy Weir',
-    review: 'Emphasizes the "Sci" in SciFi',
+    review: 'Redefines "Sci" in SciFi',
     tags: ['sci-fi', 'fiction'],
   },
   {
@@ -25,14 +25,14 @@ const bookList: Book[] = [
     isbn: '9781407191188',
     title: 'Northern Lights',
     author: 'Philip Pullman',
-    review: 'Underestimated masterpiece',
+    review: 'Fantasy masterpiece',
     tags: ['fantasy', 'fiction'],
   },
   {
     isbn: '9780547517650',
     title: 'The Joy of X',
     author: 'Steven Strogatz',
-    review: 'Complex math explained',
+    review: 'Maths, but fun',
     tags: ['non-fiction', 'science'],
   },
   {
@@ -41,13 +41,6 @@ const bookList: Book[] = [
     author: 'Paul Graham',
     review: "Essays of YC's founder",
     tags: ['non-fiction', 'essays'],
-  },
-  {
-    isbn: '9781665190565',
-    title: 'The Furthest Station',
-    author: 'Ben Aaronovitch',
-    review: 'Policing meets Magic',
-    tags: ['fiction', 'fantasy'],
   },
 ];
 

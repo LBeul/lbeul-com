@@ -5,7 +5,7 @@ import { NextPage } from 'next';
 import PostCardList from '../components/PostCardList';
 
 const Home: NextPage = ({ posts }: any) => {
-  return <PostCardList posts={posts} />;
+  return <PostCardList cards={posts} />;
 };
 
 export const getStaticProps = async () => {

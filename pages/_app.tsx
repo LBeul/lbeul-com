@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <Head>
-        <title>lbeul.com</title>
+        <title>lbeul</title>
       </Head>
       <>
         <NavBar />
