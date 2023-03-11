@@ -1,15 +1,12 @@
-import { NextPage } from 'next';
-import ProjectCard from '../components/ProjectCard';
-import ProjectCardList from '../components/ProjectsCardList';
+import { Resource } from '../../interfaces';
 
-const projects = [
+const resources: Resource[] = [
   {
     name: 'plover',
     link: 'https://github.com/LBeul/plover-web',
     description:
       'Web Application to generate playlist covers using the unsplash images api and a dom2html library. Uses styled-componets and testing-library',
     tags: ['react', 'typescript', 'web', 'styled-components'],
-    imgUrl: 'plover.png',
   },
   {
     name: 'lbeul.com',
@@ -17,7 +14,6 @@ const projects = [
     description:
       'Personal website & portfolio. Includes a markdown-driven blog. The project was built using NextJS, TypeScript and ChakraUI.',
     tags: ['react', 'next', 'typescript', 'chakra', 'web'],
-    imgUrl: 'lbeulcom.png',
   },
   {
     name: 'twimo',
@@ -25,7 +21,6 @@ const projects = [
     description:
       'Prototyped cross-platform mobile app to check for nearby cafés and coworkjing spaces. School project with deprecated API.',
     tags: ['react-native', 'javascript', 'mobile'],
-    imgUrl: 'twimo.png',
   },
   {
     name: 'digitZ',
@@ -33,11 +28,7 @@ const projects = [
     description:
       'Web GUI for esp32 microcontroller, used as an IoT gardening sensor hub. Super small bundle size (<50kb, unzipped). Uses solidJS and tailwind',
     tags: ['solid', 'javascript', 'tailwind', 'web'],
-    imgUrl: 'digitz.png',
   },
 ];
 
-const Projects: NextPage = () => {
-  return <ProjectCardList cards={projects} />;
-};
-export default Projects;
+export default resources;

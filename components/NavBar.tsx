@@ -123,11 +123,11 @@ const NAV_ITEMS: Array<NavItem> = [
     href: '/',
   },
   {
-    label: 'Projects',
-    href: '/projects',
-  },
-  {
     label: 'Books',
     href: '/books',
+  },
+  {
+    label: 'Resources',
+    href: '/resources',
   },
 ];

@@ -1,9 +1,10 @@
 import { Image, Text, Card, CardBody, Stack, Heading } from '@chakra-ui/react';
 import TagSet from './TagSet';
-import { ProjectCardProps } from '../interfaces';
+import { ResourceCardProps } from '../interfaces';
 
-const ProjectCard = ({ project }: ProjectCardProps): JSX.Element => {
-  const { name, tags, link, description, imgUrl } = project;
+const ResourceCard = ({ resource }: ResourceCardProps): JSX.Element => {
+  const { name, tags, link, description } = resource;
+
   return (
     <a href={link} target='_blank' rel='noopener noreferrer'>
       <Card
@@ -14,7 +15,7 @@ const ProjectCard = ({ project }: ProjectCardProps): JSX.Element => {
         cursor='pointer'
       >
         <Image
-          src={`project-images/${imgUrl}`}
+          src={`project-images/twimo.png`}
           alt='thumbnail'
           objectFit='cover'
           borderLeftRadius='lg'
@@ -32,4 +33,4 @@ const ProjectCard = ({ project }: ProjectCardProps): JSX.Element => {
   );
 };
 
-export default ProjectCard;
+export default ResourceCard;

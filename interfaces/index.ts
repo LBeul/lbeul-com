@@ -21,24 +21,23 @@ export type PostCardProps = {
   post: Post;
 };
 
-type Project = {
+export type Resource = {
   name: string;
   tags: string[];
   link: string;
-  imgUrl: string;
   description: string;
 };
 
-export type ProjectCardProps = {
-  project: Project;
+export type ResourceCardProps = {
+  resource: Resource;
 };
 
 export type PostCardListProps = {
   cards: Post[];
 };
 
-export type ProjectCardListProps = {
-  cards: Project[];
+export type ResourceCardListProps = {
+  cards: Resource[];
 };
 
 export type PostPageProps = {
