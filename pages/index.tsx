@@ -21,11 +21,7 @@ export const getStaticProps = async () => {
       slug: filename.split('.')[0],
     };
   });
-  return {
-    props: {
-      posts,
-    },
-  };
+  return { props: { posts } };
 };
 
 export default Home;

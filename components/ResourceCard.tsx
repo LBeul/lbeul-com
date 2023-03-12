@@ -3,8 +3,8 @@ import TagSet from './TagSet';
 import { ResourceCardProps } from '../interfaces';
 
 const ResourceCard = ({ resource }: ResourceCardProps): JSX.Element => {
-  const { name, tags, link, description } = resource;
-
+  const { name, tags, link, description, imgLink } = resource;
+  console.log(resource);
   return (
     <a href={link} target='_blank' rel='noopener noreferrer'>
       <Card
@@ -15,7 +15,7 @@ const ResourceCard = ({ resource }: ResourceCardProps): JSX.Element => {
         cursor='pointer'
       >
         <Image
-          src={`project-images/twimo.png`}
+          src={imgLink}
           alt='thumbnail'
           objectFit='cover'
           borderLeftRadius='lg'
