@@ -1,6 +1,8 @@
 import {
+  Box,
   Card,
   CardBody,
+  Flex,
   HStack,
   Icon,
   Image,
@@ -13,21 +15,27 @@ import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from 'react-icons/fa';
 
 const About: NextPage = () => {
   return (
-    <VStack my={10} spacing={5}>
+    <VStack my={10} spacing={5} width='100%'>
       <Card
         direction={{ base: 'column', md: 'row' }}
-        maxW={{ md: '100%', base: '300px' }}
+        maxW={{ sm: '100%', base: '300px' }}
         overflow='hidden'
         variant='filled'
       >
-        <Image
-          src='memoji.jpg'
-          alt='Memoji of myself, Louis'
-          maxW={{ base: '100%', sm: '310px' }}
-          maxH={{ base: '310px' }}
-          objectFit='cover'
-          borderRadius='lg'
-        />
+        <Flex
+          bgColor='white'
+          direction={{ base: 'row', md: 'column' }}
+          justifyContent='space-around'
+        >
+          <Image
+            src='memoji.jpg'
+            alt='Memoji of myself, Louis'
+            maxW='310px'
+            maxH={{ sm: '100%', base: '310px' }}
+            objectFit='cover'
+            borderRadius='lg'
+          />
+        </Flex>
         <CardBody paddingBottom={0}>
           <Text fontSize='2xl' fontWeight='semibold'>
             Hey there,
@@ -45,7 +53,7 @@ const About: NextPage = () => {
             On this website, I am sharing my thoughts, work and ideas. I even
             included some of my favourite books in here!
           </Text>
-          <HStack mt={3}>
+          <HStack my={3}>
             <a
               href='https://www.linkedin.com/in/louis-beul/'
               target='_blank'

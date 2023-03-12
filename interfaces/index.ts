@@ -32,27 +32,19 @@ export type PostCardListProps = {
 
 /* RESOURCE RELATED */
 
-export type RawResource = {
+export type Resource = {
   name: string;
   tags: string[];
   link: string;
   description: string;
-};
-
-export type PopulatedResource = {
-  name: string;
-  tags: string[];
-  link: string;
-  description: string;
-  imgLink: string;
 };
 
 export type ResourceCardProps = {
-  resource: PopulatedResource;
+  resource: Resource;
 };
 
 export type ResourceCardListProps = {
-  cards: PopulatedResource[];
+  cards: Resource[];
 };
 
 /* BOOK RELATED */

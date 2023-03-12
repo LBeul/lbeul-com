@@ -1,13 +1,15 @@
-import { HStack, Tag } from '@chakra-ui/react';
+import { Flex, HStack, Tag } from '@chakra-ui/react';
 import { TagSetProps } from '../interfaces';
 
 const TagSet = ({ tags }: TagSetProps): JSX.Element => {
   return (
-    <HStack>
+    <Flex wrap='wrap' direction='row'>
       {tags.map((tagLabel) => (
-        <Tag key={tagLabel}>{tagLabel}</Tag>
+        <Tag key={tagLabel} mr={2} my={1}>
+          {tagLabel}
+        </Tag>
       ))}
-    </HStack>
+    </Flex>
   );
 };
 
