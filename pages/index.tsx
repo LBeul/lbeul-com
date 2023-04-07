@@ -2,10 +2,18 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { NextPage } from 'next';
-import PostCardList from '../components/PostCardList';
+import CardsList from '../components/CardsList';
+import PostCard from '../components/cards/PostCard';
 
 const Home: NextPage = ({ posts }: any) => {
-  return <PostCardList cards={posts} />;
+  // return <PostCardList cards={posts} />;
+  return (
+    <CardsList>
+      {posts.map((post: any, index: number) => (
+        <PostCard post={post} key={index} />
+      ))}
+    </CardsList>
+  );
 };
 
 export const getStaticProps = async () => {

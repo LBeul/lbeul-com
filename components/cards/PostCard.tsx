@@ -1,18 +1,18 @@
 import { Image, Text, Card, CardBody, Stack, Heading } from '@chakra-ui/react';
 import Link from 'next/link';
-import { PostCardProps } from '../interfaces';
+import { PostCardProps } from '../../interfaces';
 
-import TagSet from './TagSet';
+import TagSet from '../TagSet';
 
 const PostCard = ({ post }: PostCardProps): JSX.Element => {
   const { slug, frontMatter } = post;
   return (
-    <Link href={'/blog/' + slug} passHref>
+    <Link href={`/blog/${slug}`} passHref>
       <Card
         direction={{ base: 'column', sm: 'row' }}
         overflow='hidden'
         variant='outline'
-        width={'100%'}
+        width='100%'
         cursor='pointer'
       >
         <Image

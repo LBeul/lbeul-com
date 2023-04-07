@@ -1,14 +1,14 @@
 import { Text, Card, CardBody, Heading, Link } from '@chakra-ui/react';
-import TagSet from './TagSet';
-import { ResourceCardProps } from '../interfaces';
+import TagSet from '../TagSet';
+import { ResourceCardProps } from '../../interfaces';
 
 const ResourceCard = ({ resource }: ResourceCardProps): JSX.Element => {
   const { name, tags, link, description } = resource;
   return (
     <Card
-      direction={'column'}
+      direction='column'
       overflow='hidden'
-      variant='outline'
+      variant='filled'
       cursor='pointer'
       width='100%'
     >
@@ -17,7 +17,7 @@ const ResourceCard = ({ resource }: ResourceCardProps): JSX.Element => {
           <Heading size='md'>{name}</Heading>
           <Text py='2'>{description}</Text>
         </Link>
-        <TagSet tags={tags} />
+        <TagSet tags={tags} color='cyan' />
       </CardBody>
     </Card>
   );

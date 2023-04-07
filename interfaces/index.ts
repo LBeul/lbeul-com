@@ -2,6 +2,11 @@
 
 export type TagSetProps = {
   tags: string[];
+  color?: string;
+};
+
+export type ListProps = {
+  children: JSX.Element | JSX.Element[];
 };
 
 /* BLOG RELATED */
@@ -47,16 +52,16 @@ export type ResourceCardListProps = {
   cards: Resource[];
 };
 
-/* BOOK RELATED */
+/* PROJECT RELATED */
 
-export type Book = {
-  isbn: string;
-  title: string;
-  author: string;
-  review: string;
+export type Project = {
+  name: string;
+  link: string;
+  description: string;
   tags: string[];
+  imgUrl: string;
 };
 
-export type BookCardsGridProps = {
-  bookList: Book[];
+export type ProjectsGridProps = {
+  projects: Project[];
 };

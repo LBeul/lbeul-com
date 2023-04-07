@@ -1,4 +1,4 @@
-import { Resource } from '../../interfaces';
+import { Resource } from '../interfaces';
 
 const resources: Resource[] = [
   {
@@ -21,6 +21,20 @@ const resources: Resource[] = [
     description:
       'A series of interactive lessons and exercises designed to help you quickly learn SQL right in your browser.',
     tags: ['database', 'backend', 'sql', 'tutorial'],
+  },
+  {
+    name: 'MySQL for Developers',
+    link: 'https://planetscale.com/courses/mysql-for-developers/introduction/course-introduction',
+    description:
+      "PlanetScale's MySQL tutorial for software developers without prior DB expertise.",
+    tags: ['database', 'backend', 'sql', 'tutorial'],
+  },
+  {
+    name: 'Joel on Software',
+    link: 'https://www.joelonsoftware.com/',
+    description:
+      "Great blog about software enginnering from Stackoverflow's founder Joel Spolsky.",
+    tags: ['software', 'career', 'compsci', 'blog'],
   },
   {
     name: 'The Missing Semester of Your CS Education',

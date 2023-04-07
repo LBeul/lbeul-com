@@ -1,9 +1,16 @@
 import { NextPage } from 'next';
-import ResourceCardList from '../components/ResourceCardList';
-import resources from './data/resources';
+import resources from '../data/resources';
+import CardsList from '../components/CardsList';
+import ResourceCard from '../components/cards/ResourceCard';
 
 const Resources: NextPage = () => {
-  return <ResourceCardList cards={resources} />;
+  return (
+    <CardsList>
+      {resources.map((resource: any, index: number) => (
+        <ResourceCard resource={resource} key={index} />
+      ))}
+    </CardsList>
+  );
 };
 
 export default Resources;

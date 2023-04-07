@@ -19,7 +19,7 @@ export default function NavBar(): JSX.Element {
 
   return (
     <Box>
-      <Flex minH={'60px'} align={'center'} width='75%' mx='auto' my={5}>
+      <Flex minH='60px' align='center' width='75%' mx='auto' my={5}>
         <Flex
           flex={{ base: 1, md: 'auto' }}
           display={{ base: 'flex', md: 'none' }}
@@ -29,7 +29,7 @@ export default function NavBar(): JSX.Element {
             icon={
               isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
             }
-            aria-label={'Toggle Navigation'}
+            aria-label='Toggle Navigation'
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
@@ -45,7 +45,7 @@ export default function NavBar(): JSX.Element {
           </Flex>
         </Flex>
 
-        <Stack flex={{ base: 1, md: 0 }} justify={'flex-end'} direction={'row'}>
+        <Stack flex={{ base: 1, md: 0 }} justify='flex-end' direction='row'>
           <IconButton
             onClick={toggleColorMode}
             borderRadius='full'
@@ -65,7 +65,7 @@ export default function NavBar(): JSX.Element {
 
 const DesktopNav = (): JSX.Element => {
   return (
-    <Stack direction={'row'} spacing={4}>
+    <Stack direction='row' spacing={4}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Link href={navItem.href}>{navItem.label}</Link>
@@ -77,7 +77,7 @@ const DesktopNav = (): JSX.Element => {
 
 const MobileNav = (): JSX.Element => {
   return (
-    <Flex align={'center'} width='75%' mx='auto'>
+    <Flex align='center' width='75%' mx='auto'>
       <Stack
         w='100%'
         display={{ md: 'none' }}
@@ -94,13 +94,7 @@ const MobileNav = (): JSX.Element => {
 const MobileNavItem = ({ label, href }: NavItem) => {
   return (
     <Stack spacing={4}>
-      <Flex
-        py={2}
-        as={Link}
-        href={href}
-        justify={'space-between'}
-        align={'center'}
-      >
+      <Flex py={2} as={Link} href={href} justify='space-between' align='center'>
         <Text fontWeight={600}>{label}</Text>
       </Flex>
     </Stack>
@@ -123,8 +117,8 @@ const NAV_ITEMS: Array<NavItem> = [
     href: '/',
   },
   {
-    label: 'Books',
-    href: '/books',
+    label: 'Projects',
+    href: '/projects',
   },
   {
     label: 'Resources',
